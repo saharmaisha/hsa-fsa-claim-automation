@@ -25,3 +25,51 @@ This project automates the process of checking eligibility and generating claim 
 ```bash
 git clone https://github.com/your-username/hsa-fsa-claim-automation.git
 cd hsa-fsa-claim-automation
+```
+
+2. Install dependencies:
+
+   ```bash
+   npm install @clerk/nextjs axios next react react-dom pdf-lib
+   # or
+   yarn add @clerk/nextjs axios next react react-dom pdf-lib
+   ```
+
+3. Set up environment variables:
+
+   Create a `.env.local` file in the root directory of the project and add your Clerk keys:
+
+   ```bash
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-clerk-publishable-key
+   CLERK_SECRET_KEY=your-clerk-secret-key
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:3000` to see the application.
+
+### Additional Configuration
+
+- Ensure you have the necessary PDF forms in the `pdf-forms` directory.
+- Make sure the `public/claims` directory exists for saving generated claim PDFs.
+
+## Screenshots
+
+### Sign-in
+![Signin1](images/signin1.png)
+![Signin2](images/signin2.png)
+
+### Eligibility Form
+![Form1](images/form1.png)
+![Form2](images/form2.png)
+
+### Results
+![Results1](images/results1.png)
+![Results2](images/results2.png)
+```
